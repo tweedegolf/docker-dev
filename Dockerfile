@@ -28,7 +28,7 @@ RUN apt-get update \
 
 # Install nodejs, update npm and install gulp-cli
 RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - \
-    && echo 'deb https://deb.nodesource.com/$NODE_VERSION jessie main' > /etc/apt/sources.list.d/nodesource.list \
+    && echo "deb https://deb.nodesource.com/$NODE_VERSION jessie main" > /etc/apt/sources.list.d/nodesource.list \
     && apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         nodejs
