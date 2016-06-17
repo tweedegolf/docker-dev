@@ -1,4 +1,4 @@
-FROM php:7.0.7
+FROM php:5.6.22
 
 # Set some versions
 ENV NODE_VERSION="node_4.x" \
