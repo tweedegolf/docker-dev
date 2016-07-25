@@ -1,10 +1,10 @@
-FROM php:7.0.8
+FROM php:7.0.9
 
 # Set some versions
 ENV NODE_VERSION="node_4.x" \
-    NPM_VERSION="3.9.*" \
+    NPM_VERSION="3.10.*" \
     GULP_CLI_VERSION="1.2.*" \
-    COMPOSER_VERSION="1.1.2" \
+    COMPOSER_VERSION="1.2.0" \
     POSTGRESQL_VERSION="9.4"
 
 # Install dependencies
