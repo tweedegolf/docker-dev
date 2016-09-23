@@ -5,7 +5,11 @@ ENV NODE_VERSION="node_4.x" \
     NPM_VERSION="3.10.*" \
     GULP_CLI_VERSION="1.2.*" \
     COMPOSER_VERSION="1.2.1" \
-    POSTGRESQL_VERSION="9.4"
+    POSTGRESQL_VERSION="9.5"
+    
+RUN curl -s https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - \
+    && echo "deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main" > /etc/apt/sources.list.d/pgdg.list \
+    && apt-get update
 
 # Install dependencies
 RUN apt-get update \
