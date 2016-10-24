@@ -1,4 +1,4 @@
-FROM php:5.6.26
+FROM php:5.6.27
 
 # Set some versions
 ENV NODE_VERSION="node_4.x" \
@@ -7,7 +7,7 @@ ENV NODE_VERSION="node_4.x" \
     COMPOSER_VERSION="1.2.1" \
     POSTGRESQL_VERSION="9.5" \
     APCU_VERSION="4.0.11"
-    
+
 RUN curl -s https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - \
     && echo "deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main" > /etc/apt/sources.list.d/pgdg.list \
     && apt-get update
