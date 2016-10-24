@@ -36,6 +36,10 @@ RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
     && apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         nodejs
+# Fix bug https://github.com/npm/npm/issues/9863
+RUN cd $(npm root -g)/npm \
+    && npm install fs-extra \
+    && sed -i -e s/graceful-fs/fs-extra/ -e s/fs\.rename/fs.move/ ./lib/utils/rename.js
 RUN npm install -g "npm@$NPM_VERSION"
 RUN npm install -g "gulp-cli@$GULP_CLI_VERSION"
 
