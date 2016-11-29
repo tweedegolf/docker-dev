@@ -1,10 +1,10 @@
-FROM php:5.6.27
+FROM php:5.6.28
 
 # Set some versions
 ENV NODE_VERSION="node_4.x" \
     NPM_VERSION="3.10.*" \
     GULP_CLI_VERSION="1.2.*" \
-    COMPOSER_VERSION="1.2.1" \
+    COMPOSER_VERSION="1.2.2" \
     POSTGRESQL_VERSION="9.5" \
     APCU_VERSION="4.0.11"
 
