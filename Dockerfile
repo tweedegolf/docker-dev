@@ -1,10 +1,10 @@
-FROM php:7.0.12
+FROM php:7.0.13
 
 # Set some versions
 ENV NODE_VERSION="node_6.x" \
-    NPM_VERSION="3.10.*" \
+    NPM_VERSION="4.0.*" \
     GULP_CLI_VERSION="1.2.*" \
-    COMPOSER_VERSION="1.2.1" \
+    COMPOSER_VERSION="1.2.2" \
     POSTGRESQL_VERSION="9.5"
 
 RUN curl -s https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - \
