@@ -1,4 +1,4 @@
-FROM tweedegolf/php-fpm:latest
+FROM tweedegolf/php-fpm:7.0.14
 
 # Set some versions
 ENV NODE_VERSION="node_6.x" \
