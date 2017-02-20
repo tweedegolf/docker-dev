@@ -1,4 +1,4 @@
-FROM tweedegolf/php-fpm:7.1.1
+FROM tweedegolf/php-fpm:7.1.2
 
 # Install dependencies
 RUN apt-get update \
@@ -36,7 +36,7 @@ ENV GULP_CLI_VERSION 1.2.*
 RUN npm install -g "gulp-cli@$GULP_CLI_VERSION"
 
 # Install composer
-ENV COMPOSER_VERSION 1.3.1
+ENV COMPOSER_VERSION 1.3.2
 RUN curl -o /usr/local/bin/composer https://getcomposer.org/download/$COMPOSER_VERSION/composer.phar \
     && chmod a+x /usr/local/bin/composer
 
